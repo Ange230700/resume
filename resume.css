@@ -1,15 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
 :root {
   /* 
-        TODO: All things typo-related
         TODO: All things color-related
-        TODO: All things spacing-related
     */
+  --standard-font-size: 10px;
+  font-size: calc(var(--standard-font-size) * 1.6);
+  --spacing: calc(var(--standard-font-size) * 0.8);
+  --main-font-family: 'Urbanist', sans-serif;
 }
 
 * {
-  /* TODO: box model */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html,
 body {
+  /* ! A4 format */
+  display: flex;
+  max-width: 1240px;
+  max-height: 1754px;
+  overflow: hidden;
+  font-size: 1rem;
+  font-family: var(--main-font-family);
 }
