@@ -16,27 +16,34 @@
   box-sizing: border-box;
 }
 
+html,
+body,
+.resume-wrapper {
+  overflow: hidden;
+}
+
 html {
   /* ! A4 format */
   max-width: 1240px;
-  height: 1754px;
-  overflow: hidden;
+  height: 1752px;
+}
+
+body,
+.resume-wrapper {
+  width: 100%;
+  height: 100%;
 }
 
 body {
   display: flex;
   font-size: 1rem;
   font-family: var(--main-font-family);
-  width: 100%;
-  height: 100%;
   flex-direction: column;
 }
 
 .resume-wrapper {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 100%;
   gap: calc(var(--spacing) * 2);
 }
 
@@ -57,7 +64,8 @@ h3 {
   margin-bottom: calc(var(--spacing) * 2);
 }
 
-h4 {
+h4,
+.experiences-list {
   margin-bottom: calc(var(--spacing) * 1.5);
 }
 
@@ -106,6 +114,8 @@ h4 {
   font-size: 0.75rem;
 }
 
-.description-text {
+.description-text,
+.experiences-list-item,
+h4 {
   text-wrap: pretty;
 }
