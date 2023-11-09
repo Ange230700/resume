@@ -2,10 +2,10 @@
 
 :root {
   --standard-font-size: 10px;
-  font-size: calc(var(--standard-font-size) * 2.875);
+  font-size: calc(var(--standard-font-size) * 3);
 
   --spacing: calc(var(--standard-font-size) * 0.8);
-  padding: calc(var(--spacing) * 4);
+  padding: calc(var(--spacing) * 2) calc(var(--spacing) * 4);
 
   --main-font-family: "Urbanist", sans-serif;
 }
@@ -36,7 +36,7 @@ body,
 
 body {
   display: flex;
-  font-size: 1rem;
+  font-size: calc(1rem);
   font-family: var(--main-font-family);
   flex-direction: column;
 }
@@ -44,7 +44,6 @@ body {
 .resume-wrapper {
   display: flex;
   flex-direction: column;
-  gap: calc(var(--spacing) * 2);
 }
 
 .title {
@@ -56,31 +55,22 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
-  text-wrap: pretty;
 }
 
 h3 {
   text-decoration-line: underline;
-  margin-bottom: calc(var(--spacing) * 2);
-}
-
-h4,
-.experiences-list {
-  margin-bottom: calc(var(--spacing) * 1.5);
 }
 
 .contact-wrapper {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  gap: calc(var(--spacing) * 4);
 }
 
 .basic-contact-info {
-  width: calc((100% - var(--spacing) * 4) / 2);
+  width: calc((100% - var(--spacing)) / 2);
   display: flex;
   flex-direction: column;
-  gap: calc(var(--spacing) * 1.25);
 }
 
 .basic-contact-info .mail,
@@ -96,12 +86,11 @@ h4,
 }
 
 .socials-wrapper {
-  width: calc((100% - var(--spacing) * 4) / 2);
+  width: calc((100% - var(--spacing)) / 2);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: calc(var(--spacing) * 1.25);
 }
 
 .socials {
@@ -110,12 +99,63 @@ h4,
   align-items: center;
 }
 
-.socials p {
-  font-size: 0.75rem;
+.formation-list {
+  display: flex;
+  flex-direction: column;
 }
 
-.description-text,
-.experiences-list-item,
-h4 {
-  text-wrap: pretty;
+.formation-list-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.school {
+  font-weight: 600;
+}
+
+.resume-wrapper,
+.contact-wrapper,
+.basic-contact-info,
+.socials-wrapper {
+  gap: calc(var(--spacing) * 1);
+}
+
+h3,
+h4,
+.experiences-list,
+.formation-list,
+.competences-techniques-list,
+.competences-techniques-list-item,
+.soft-skills-list,
+.soft-skills-list-item {
+  margin-bottom: calc(var(--spacing) * 1);
+}
+
+.competences-techniques-list,
+.soft-skills-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-between;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.competences-techniques-list-item,
+.soft-skills-list-item {
+  display: flex;
+  justify-content: center;
+  width: calc((100% - var(--spacing) * 2) / 3);
+}
+
+.competences-techniques-list-item:nth-child(3n + 1),
+.competences-techniques-list-item:nth-child(3n + 2),
+.soft-skills-list-item:nth-child(3n + 1),
+.soft-skills-list-item:nth-child(3n + 2) {
+  border-right: 1px solid black;
+}
+
+.competences-techniques-list-item:last-child,
+.soft-skills-list-item:last-child {
+  border-right: none;
 }
