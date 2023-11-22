@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
 
 :root {
+  --width: 1240px;
+  --height: 1752px;
+
   --standard-font-size: 10px;
   font-size: calc(var(--standard-font-size) * 3);
 
@@ -24,8 +27,8 @@ body,
 
 html {
   /* ! A4 format */
-  max-width: 1240px;
-  height: 1752px;
+  max-width: calc(var(--width) * 1);
+  height: calc(var(--height) * 1);
 }
 
 body,
@@ -145,13 +148,15 @@ h4,
 .soft-skills-list-item {
   display: flex;
   justify-content: center;
-  width: calc((100% - var(--spacing) * 2) / 3);
+  width: calc((100% - var(--spacing) * 2) / 4);
 }
 
-.competences-techniques-list-item:nth-child(3n + 1),
-.competences-techniques-list-item:nth-child(3n + 2),
-.soft-skills-list-item:nth-child(3n + 1),
-.soft-skills-list-item:nth-child(3n + 2) {
+.competences-techniques-list-item:nth-child(4n + 1),
+.competences-techniques-list-item:nth-child(4n + 2),
+.competences-techniques-list-item:nth-child(4n + 3),
+.soft-skills-list-item:nth-child(4n + 1),
+.soft-skills-list-item:nth-child(4n + 2),
+.soft-skills-list-item:nth-child(4n + 3) {
   border-right: 1px solid black;
 }
 
