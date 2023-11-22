@@ -102,6 +102,11 @@ h3 {
   align-items: center;
 }
 
+.socials-logo {
+  width: calc(var(--standard-font-size) * 4);
+  height: auto;
+}
+
 .formation-list {
   display: flex;
   flex-direction: column;
